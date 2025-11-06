@@ -5,6 +5,8 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
+**🌐 Live Website**: [https://rsk-decoder.vercel.app/](https://rsk-decoder.vercel.app/)
+
 An open-source tool that decodes complex Rootstock transactions. Users paste a transaction hash to get a human-readable trace of internal calls, state changes, and events. It solves the critical developer problem of debugging failed or complex transactions, accelerating dApp development and improving security auditing on Rootstock.
 
 ## 🌟 Features
