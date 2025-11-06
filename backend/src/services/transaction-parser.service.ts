@@ -1,4 +1,3 @@
-import { ethers } from 'ethers'
 import { EVMTraceCall, CallTrace, Event, StateChange } from '../types'
 import { SignatureDecoderService } from './signature-decoder.service'
 

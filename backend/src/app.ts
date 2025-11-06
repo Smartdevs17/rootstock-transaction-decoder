@@ -24,7 +24,7 @@ export const createApp = (): Express => {
 
 	app.use(rateLimiter)
 
-	app.get('/health', (req, res) => {
+	app.get('/health', (_, res) => {
 		res.status(200).json({
 			success: true,
 			message: 'Server is healthy',
