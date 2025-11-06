@@ -1,19 +1,22 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": null,
+  "functions": {
+    "api/index.ts": {
+      "runtime": "@vercel/node"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/api/v1/(.*)",
-      "dest": "/api/index.ts"
+      "source": "/api/v1/(.*)",
+      "destination": "/api/index"
     },
     {
-      "src": "/health",
-      "dest": "/api/index.ts"
+      "source": "/health",
+      "destination": "/api/index"
     }
   ]
 }

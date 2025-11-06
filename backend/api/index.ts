@@ -1,6 +1,5 @@
-import { createApp } from '../src/app'
-import { connectDatabase, disconnectDatabase } from '../src/config/database'
-import { env } from '../src/config/env'
+import { createApp } from '../src/app.js'
+import { connectDatabase } from '../src/config/database.js'
 
 const app = createApp()
 
@@ -22,4 +21,3 @@ export default async function handler(req: any, res: any) {
 	
 	app(req, res)
 }
-
