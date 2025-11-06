@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
-import { env } from '../config/env'
-import { Transaction, TransactionReceipt, EVMTraceCall } from '../types'
+import { env } from '../config/env.js'
+import { Transaction, TransactionReceipt, EVMTraceCall } from '../types/index.js'
 
 export class RPCService {
 	private mainnetProvider: ethers.JsonRpcProvider

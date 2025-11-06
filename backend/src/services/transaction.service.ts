@@ -1,7 +1,7 @@
-import { RPCService } from './rpc.service'
-import { TransactionParserService } from './transaction-parser.service'
-import { TransactionModel } from '../models/Transaction'
-import { TransactionData } from '../types'
+import { RPCService } from './rpc.service.js'
+import { TransactionParserService } from './transaction-parser.service.js'
+import { TransactionModel } from '../models/Transaction.js'
+import { TransactionData } from '../types/index.js'
 
 export class TransactionService {
 	private rpcService: RPCService

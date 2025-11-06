@@ -1,9 +1,9 @@
 import express, { Express } from 'express'
 import cors from 'cors'
-import { env } from './config/env'
-import transactionRoutes from './routes/transaction.routes'
-import { errorHandler, notFoundHandler } from './middleware/error-handler'
-import { rateLimiter } from './middleware/rate-limiter'
+import { env } from './config/env.js'
+import transactionRoutes from './routes/transaction.routes.js'
+import { errorHandler, notFoundHandler } from './middleware/error-handler.js'
+import { rateLimiter } from './middleware/rate-limiter.js'
 
 export const createApp = (): Express => {
 	const app = express()

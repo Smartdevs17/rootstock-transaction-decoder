@@ -1,5 +1,5 @@
-import { EVMTraceCall, CallTrace, Event, StateChange } from '../types'
-import { SignatureDecoderService } from './signature-decoder.service'
+import { EVMTraceCall, CallTrace, Event, StateChange } from '../types/index.js'
+import { SignatureDecoderService } from './signature-decoder.service.js'
 
 export class TransactionParserService {
 	private signatureDecoder: SignatureDecoderService

@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose'
-import { TransactionData } from '../types'
+import { TransactionData } from '../types/index.js'
 
 export interface TransactionDocument extends Document {
 	txHash: string

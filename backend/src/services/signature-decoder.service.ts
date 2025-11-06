@@ -1,5 +1,5 @@
 import { Interface, AbiCoder, Result } from 'ethers'
-import { Event } from '../types'
+import { Event } from '../types/index.js'
 
 export class SignatureDecoderService {
 	private functionSignatures: Map<string, string> = new Map()
