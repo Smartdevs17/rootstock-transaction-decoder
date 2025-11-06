@@ -25,6 +25,7 @@ This project follows **MVC (Model-View-Controller)** architecture:
 ```
 rootstock-transaction-decoder/
 ├── backend/              # Node.js/TypeScript backend
+│   ├── api/             # Vercel serverless function
 │   ├── src/
 │   │   ├── config/      # Configuration (env, database)
 │   │   ├── controllers/ # Request handlers
@@ -37,6 +38,7 @@ rootstock-transaction-decoder/
 │   │   │   ├── transaction-parser.service.ts # EVM trace parsing
 │   │   │   └── transaction.service.ts      # Main transaction service
 │   │   └── types/       # TypeScript types
+│   ├── vercel.json      # Vercel deployment config
 │   └── package.json
 │
 └── frontend/            # React/TypeScript frontend
@@ -46,6 +48,7 @@ rootstock-transaction-decoder/
     │   ├── services/    # API services
     │   ├── types/       # TypeScript types
     │   └── hooks/       # Custom hooks
+    ├── vercel.json      # Vercel deployment config
     └── package.json
 ```
 
@@ -319,7 +322,18 @@ When `debug_traceTransaction` is not available (common with public RPC nodes):
 - The service automatically falls back to basic call traces
 - For full tracing, use an archive node with debug methods enabled
 
-See [backend/TROUBLESHOOTING.md](backend/TROUBLESHOOTING.md) for more details.
+### Network Mismatch
+
+- Ensure the selected network (mainnet/testnet) matches the transaction's network
+- Transactions from mainnet won't be found on testnet and vice versa
+- The network switcher in the UI helps ensure you're querying the correct network
+
+### Vercel Deployment Issues
+
+- Ensure all environment variables are set in Vercel dashboard
+- Check that `CORS_ORIGIN` matches your frontend URL exactly
+- Verify MongoDB connection string is correct
+- Ensure Node.js version is 18+ in Vercel settings
 
 ## 🤝 Contributing
 
